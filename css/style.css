@@ -1,0 +1,30 @@
+body{
+	height: 97vh;
+}
+.colors{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: calc(100vw / 7 - 10px);
+	width: 100% - 2px;
+	margin-bottom: 50px;
+}
+.color__block{
+	width: calc(100vw / 7 - 10px);
+	height: calc(100vw / 7 - 10px);
+	border-radius: 5px;
+	border: 1px solid rgb(184, 184, 184);
+}
+.slider{
+	margin: auto;
+	width: 70vw;
+	max-width: 500px;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.slider__picture{
+	max-height: 90%;
+} 
