@@ -1,13 +1,20 @@
 window.onload = function () {
   let blocks = document.getElementsByClassName("color__block");
   for (const elem of blocks) {
-    randomColor(elem);
+    setRandomColor(elem, getRandomColor());
   }
 };
 
-function randomColor(sender) {
-  let color = Math.floor(Math.random() * 16777215).toString(16);
-  sender.style.backgroundColor = "#" + color;
+function getRandomColor() {
+  return Math.floor(Math.random() * 16777215).toString(16);
+  
+}
+function setRandomColor(elem, color){
+  elem.style.backgroundColor = "#" + color;
+}
+function changeColor(elem){
+  const color = getRandomColor();
+  elem.style.backgroundColor = (color !== elem.style.backgroundColor) ? color : changeColor(elem);
 }
 
 function rightPic() {
