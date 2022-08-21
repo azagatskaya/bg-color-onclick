@@ -7,14 +7,16 @@ window.onload = function () {
 
 function getRandomColor() {
   return Math.floor(Math.random() * 16777215).toString(16);
-  
 }
+
 function setRandomColor(elem, color){
   elem.style.backgroundColor = "#" + color;
 }
+
 function changeColor(elem){
+  const currentColor = elem.style.backgroundColor;
   const color = getRandomColor();
-  elem.style.backgroundColor = (color !== elem.style.backgroundColor) ? color : changeColor(elem);
+  elem.style.backgroundColor = (color !== currentColor) ? color : getRandomColor();
 }
 
 function rightPic() {
